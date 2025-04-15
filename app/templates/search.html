@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Search Minecraft Login{% endblock %}
+{% block content %}
+<h1>Search Minecraft Login</h1>
+<form method="post" class="mb-3">
+  <div class="mb-3">
+    <input type="text" name="username" class="form-control" placeholder="Enter Minecraft username" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+{% if result %}
+  <h2>Result for {{ result.username }}</h2>
+  <ul class="list-group">
+    <li class="list-group-item">UUID: {{ result.uuid }}</li>
+    <li class="list-group-item">Type: {{ result.type }}</li>
+    <li class="list-group-item">Version: {{ result.version }}</li>
+    <li class="list-group-item">Upvotes Lifetime: {{ result.upvotes_lifetime }}</li>
+    <li class="list-group-item">Views Lifetime: {{ result.views_lifetime }}</li>
+    <!-- add more fields as desired -->
+  </ul>
+{% endif %}
+{% endblock %}
+

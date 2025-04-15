@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Cached Minecraft Logins</h1>
+<ul class="list-group">
+  {% for name in usernames %}
+    <li class="list-group-item">{{ name }}</li>
+  {% else %}
+    <li class="list-group-item">No logins cached yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
