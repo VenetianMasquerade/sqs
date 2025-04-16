@@ -5,3 +5,10 @@ theme:
 plugins:
   - search
   - mkdocstrings
+      default_handler: python
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
