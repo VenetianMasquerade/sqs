@@ -4,3 +4,4 @@ theme:
   highlightjs: true
 plugins:
   - search
+  - mkdocstrings
